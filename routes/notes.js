@@ -9,11 +9,8 @@ notes.get("/", (req, res) => {
 
 // POST Route for a new UX/UI notes
 notes.post("/", (req, res) => {
-  console.log(req.body);
-
   const { title, text } = req.body;
-
-  if (req.body) {
+  if (title && text) {
     const newNote = {
       title,
       text,
